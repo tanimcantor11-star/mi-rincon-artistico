@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mi rincón artístico ♡</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Trebuchet MS", sans-serif;
+      background: #fff4f8;
+      color: #715477;
+      text-align: center;
+    }
+
+    header {
+      padding: 35px 15px;
+      background: #f4dff2;
+    }
+
+    h1 {
+      color: #a35b98;
+      font-size: 2.2rem;
+    }
+
+    section {
+      padding: 25px 15px;
+    }
+
+    .boton {
+      background: #dcb8e8;
+      color: #593e65;
+      border: none;
+      border-radius: 25px;
+      padding: 12px 20px;
+      margin: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .boton:hover {
+      background: #c99bdc;
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .dibujo {
+      background: white;
+      border: 2px solid #f0d4ed;
+      border-radius: 18px;
+      padding: 25px;
+      width: 150px;
+      box-shadow: 0 4px 10px #e9d5e8;
+    }
+    
+.dibujo img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.dibujo {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.dibujo:hover {
+  transform: translateY(-5px);
+}
+
+    #sorpresa {
+      min-height: 30px;
+      color: #a35b98;
+      font-weight: bold;
+    }
+
+    footer {
+      padding: 20px;
+      background: #f4dff2;
+    }
+
+    /* Estilo alternativo para el botón de tema */
+    body.lila {
+      background: #eee7ff;
+      color: #584878;
+    }
+
+    body.lila header,
+    body.lila footer {
+      background: #dcd0fa;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>♡ Mi rincón artístico ♡</h1>
+    <p>Un pequeño mundo lleno de dibujos y creatividad ✧</p>
+
+    <button class="boton" onclick="cambiarTema()">
+      Cambiar colores 🎨
+    </button>
+
+    <button class="boton" onclick="mostrarSorpresa()">
+      Una sorpresa ♡
+    </button>
+  </header>
+
+  <section>
+    <h2>✿ ¡Bienvenida a mi mundo! ✿</h2>
+    <p>
+      Aquí guardo mis ideas, mis dibujos
+      y todas las cosas bonitas que imagino.
+    </p>
+    <p id="sorpresa">♡ Gracias por visitar mi pequeño espacio ♡</p>
+  </section>
+
+  <section>
+    <h2>🎨 Mi galería de arte</h2>
+    <p>Mis dibujos tendrán su propio lugar aquí.</p>
+
+    <div class="galeria">
+      
+<div class="galeria">
+  <div class="dibujo">
+    <img src="imagenes/dibujo2.jpg" alt="Mi primer dibujo">
+    <h3>♡ Mis bocetos</h3>
+    <p>Ideas por terminar</p>
+  </div>
+
+  <div class="dibujo">
+    <img src="imagenes/dibujo1.jpg" alt="Mi segundo dibujo">
+    <h3>☆ Mis favoritos</h3>
+    <p>Creaciones especiales</p>
+  </div>
+</div>
+
+
+      <div class="dibujo">
+        <h3>☆ Pinturas</h3>
+        <p>🖌️ Colores y texturas</p>
+      </div>
+
+      <div class="dibujo">
+        <h3>✿ Favoritos</h3>
+        <p>💗 Mis creaciones especiales</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Hecho con amor y creatividad ♡
+  </footer>
+
+  <script>
+    function cambiarTema() {
+      document.body.classList.toggle("lila");
+    }
+
+    function mostrarSorpresa() {
+      const mensajes = [
+        "¡Nunca dejes de crear! 🎨",
+        "Cada dibujo cuenta una historia ♡",
+        "Tu imaginación no tiene límites ✨",
+        "Un pequeño trazo también es un comienzo 🌷"
+      ];
+
+      const numero = Math.floor(Math.random() * mensajes.length);
+
+      document.getElementById("sorpresa").textContent =
+        mensajes[numero];
+    }
+  </script>
+</body>
+</html>
